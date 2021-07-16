@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class_2</title>
+</head>
+<body>
+<script>
+
+    /*
+
+
+
+      - Дано 2 масиви з рівною кількістю об'єктів.
+      Масиви:
+          let usersWithId = [
+              {id: 1, name: 'vasya', age: 31, status: false},
+              {id: 2, name: 'petya', age: 30, status: true},
+              {id: 3, name: 'kolya', age: 29, status: true},
+              {id: 4, name: 'olya', age: 28, status: false}
+          ];
+
+      let citiesWithId = [
+          {user_id: 3, country: 'USA', city: 'Portland'},
+          {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+          {user_id: 2, country: 'Poland', city: 'Krakow'},
+          {user_id: 4, country: 'USA', city: 'Miami'}
+      ];
+
+      З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+          Записати цей об'єкт в новий масив
+      Example:
+          let usersWithCities = [
+              {
+                  id: 1, // <===
+                  name: 'vasya',
+                  age: 31,
+                  status: false,
+                  address: {
+                      user_id: 1, // <===
+                      country: 'Ukraine',
+                      city: 'Ternopil'
+                  }
+              },
+              // TO BE CONTINUED .....
+          ]*/
+    /* -створити масив з:
+         - з 5 числових значень
+     - з 5 стічкових значень
+     - з 5 значень стрічкового, числового та булевого типу
+     - та вивести його в консоль
+   */
+
+    let arr = [
+        [1, 2, 3, 4, 5],
+        ['apple', 'apricot', 'cherry', 'orange', 'pineapple'],
+        ['sky', 'sun', 2, true, false]
+    ]
+
+    console.log(arr);
+
+    /*-- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
+
+    - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
+    - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
+    - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
+    - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+
+    - Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
+    - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
+    - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
+    - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
+    - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
+    - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
+
+    - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+    - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+    - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+    - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+    - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+    - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+    */
+
+    console.log('================== TASK 1 ==================');
+    const posts = [];
+    posts[0] = {
+        userId: 1,
+        id: 1,
+        title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+        body: 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+    };
+
+    posts[1] = {
+        userId: 1,
+        id: 1,
+        title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+        body: 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'
+    };
+    posts[2] = {
+        userId: 1,
+        id: 2,
+        title: 'qui est esse',
+        body: 'est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla'
+    };
+    posts[3] = {
+        userId: 1,
+        id: 3,
+        title: 'ea molestias quasi exercitationem repellat qui ipsa sit aut',
+        body: 'et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut'
+    };
+    posts[4] = {
+        userId: 1,
+        id: 4,
+        title: 'eum et est occaecati',
+        body: 'ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit'
+    };
+    posts[5] = {
+        userId: 1,
+        id: 5,
+        title: 'nesciunt quas odio',
+        body: 'repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque'
+    };
+    document.write(`<div>`);
+    for (const post of posts) {
+        console.log(post);
+    }
+    document.write(`</div>`);
+
+    console.log('================== TASK 2 ==================');
+    /*
+        document.write(`<div>`);
+        for (let i = 0; i < 10; i++) {
+            document.write(`<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, nesciunt.</div>`);
+        }
+        document.write(`</div>`);
+
+ console.log('================== TASK 3 ==================');
+        document.write(`<div>`);
+        for (let i = 0; i < 10; i++) {
+            document.write(`
+                <div>${i}</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, nesciunt.</div>
+            `);
+        }
+        document.write(`</div>`);
+
+ console.log('================== TASK 4 ==================');
+
+        document.write(`<div>`);
+        let i = 0;
+        while (i < 20) {
+            document.write(`<div><h1>Lorem ipsum dolor sit amet.</h1></div>`);
+            i++;
+        }
+        document.write(`</div>`);
+
+         console.log('================== TASK 5 ==================');
+
+        document.write(`<div>`);
+        let i = 0;
+        while (i < 20) {
+            document.write(`<div>
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <div>${i}</div>
+                            </div>`);
+            i++;
+        }
+      document.write(`</div>`);*/
+    console.log('================== TASK 6 ==================');
+
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i]);
+    }
+    console.log('================== TASK 7 ==================');
+    let texts = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+    for (let i = 0; i < texts.length; i++) {
+        console.log(texts[i]);
+
+    }
+    console.log('================== TASK 8 ==================');
+
+    let mix = ['sky', 'sun', 'stars', 1, 2, 3, 4, 5, true, false];
+    for (let i = 0; i < mix.length; i++) {
+        console.log(mix[i]);
+
+    }
+
+    console.log('================== TASK 9 ==================');
+    for (let i = 0; i < mix.length; i++) {
+        const mix1 = mix[i];
+        if (typeof mix1 === 'boolean') {
+            console.log(mix1);
+
+        }
+    }
+    console.log('================== TASK 10 ==================');
+
+    for (let i = 0; i < mix.length; i++) {
+        const mix2 = mix[i];
+        if (typeof mix2 === 'number') {
+            console.log(mix2);
+
+        }
+
+    }
+    console.log('================== TASK 11 ==================');
+    for (let i = 0; i < mix.length; i++) {
+        const mix3 = mix[i];
+        if (typeof mix3 === 'string') {
+            console.log(mix3);
+
+        }
+
+    }
+    console.log('================== TASK 12 ==================');
+
+    let mixArray = ['sky', 'sun', 'stars', 1, 2, 3, 4, 5, true, false];
+    console.log([0], [1], [2], [3], [4], [5], [6], [7], [8], [9]);
+
+    console.log('================== TASK 13 ==================');
+    for (let i = 0; i < 10; i++) {
+        console.log(i);
+        document.write(i);
+
+
+    }
+    console.log('================== TASK 14 ==================');
+    for (let i = 0; i < 100; i++) {
+        console.log(i);
+        document.write(i);
+
+
+    }
+    console.log('================== TASK 15 ==================');
+    for (let i = 0; i < 100; i += 2) {
+        console.log(i);
+        document.write(i);
+    }
+
+    console.log('================== TASK 16 ==================');
+    for (let i = 0; i < 100; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+            document.write(i);
+        }
+    }
+
+    console.log('================== TASK 17 ==================');
+    for (let i = 0; i < 100; i++) {
+        if (i % 2 === 1) {
+            console.log(i);
+            document.write(i);
+        }
+    }
+    /*  - Дано 2 масиви з рівною кількістю об'єктів.
+      Масиви:
+          let usersWithId = [
+              {id: 1, name: 'vasya', age: 31, status: false},
+              {id: 2, name: 'petya', age: 30, status: true},
+              {id: 3, name: 'kolya', age: 29, status: true},
+              {id: 4, name: 'olya', age: 28, status: false}
+          ];
+
+      let citiesWithId = [
+          {user_id: 3, country: 'USA', city: 'Portland'},
+          {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+          {user_id: 2, country: 'Poland', city: 'Krakow'},
+          {user_id: 4, country: 'USA', city: 'Miami'}
+      ];
+
+      З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+          Записати цей об'єкт в новий масив
+      Example:
+          let usersWithCities = [
+              {
+                  id: 1, // <===
+                  name: 'vasya',
+                  age: 31,
+                  status: false,
+                  address: {
+                      user_id: 1, // <===
+                      country: 'Ukraine',
+                      city: 'Ternopil'
+                  }
+              },
+              // TO BE CONTINUED .....
+          ]*/
+
+    let usersWithId = [
+        {id: 1, name: 'vasya', age: 31, status: false},
+        {id: 2, name: 'petya', age: 30, status: true},
+        {id: 3, name: 'kolya', age: 29, status: true},
+        {id: 4, name: 'olya', age: 28, status: false}
+    ];
+    let citiesWithId = [
+        {user_id: 3, country: 'USA', city: 'Portland'},
+        {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+        {user_id: 2, country: 'Poland', city: 'Krakow'},
+        {user_id: 4, country: 'USA', city: 'Miami'}
+    ];
+
+
+
+    for (const citiesElement of citiesWithId) {
+        for (const usersWithIdElement of usersWithId) {
+            if (usersWithIdElement.id === citiesElement.user_id) {
+                usersWithIdElement.address = citiesElement;
+
+            }
+
+        }
+
+    }
+    console.log(usersWithId);
+
+
+</script>
+</body>
+</html>
